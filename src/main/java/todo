@@ -1,0 +1,65 @@
+# System rezerwacji sal kinowych
+
+Celem aplikacji konsolowej jest reprezentacja systemu do zarządzania salami kinowymi.
+Aplikacja powinna umożliwiać następujące funkcjonalności:
+
+* dodawanie rezerwacji na konkretny seans
+* usuwanie rezerwacji
+* aktualizacja rezerwacji
+* wyświetlanie rezerwacji
+* wyszukiwanie rezerwacji po nazwie seansu
+* sortowanie rezerwacji po dacie
+* wyszukiwanie rezerwacji po dacie i nazwie seansu
+
+## Komponenty aplikacji
+
+### Reservation
+
+Klasa Reservation powinna zawierać conajmniej następujące właściwości:
+
+* id,
+* imię i nazwisko osoby rezerwującej
+* nazwę seansu
+* datę seansu w formacie HH:mm dd.MM.yyyy
+* liczbę miejsc zarezerwowanych
+
+### ReservationCollection
+
+Klasa ReservationCollection powinna zawierać tablicę obiektów klasy Reservation oraz udostępniać
+operacje takie jak:
+
+* dodawanie elementów do kolekcji//
+* usuwanie elementów z kolekcji//
+* aktualizacja elementów kolekcji ??????
+* zwracanie tablicy rezerwacji//
+
+### ReservationService
+
+Klasa powinna zawierać funkcjonalności realizowane w ramach systemu rezerwacji sal kinowych:
+
+* dodawanie rezerwacji
+* usuwanie rezerwacji
+* aktualizacja rezerwacji
+* wyświetlanie rezerwacji
+* wyszukiwanie rezerwacji po nazwie seansu
+* sortowanie rezerwacji po dacie
+* wyszukiwanie rezerwacji po dacie i nazwie seansu
+
+W ramach funkcjonalności dodawania, usuwania, aktualizacji zadbaj o odpowiednią walidację danych
+
+### ReservationPresenter
+
+Klasa ta powinna reprezentować interfejs użytkownika.
+
+### Schemat
+
+ReservationPresenter <- ReservationService <- ReservationCollection <- Reservation
+
+
+## Testy aplikacji
+
+W ramach tworzenia systemu zadbaj o przygotowanie testów jednostkowych, które będą sprawdzać klasy takie jak:
+
+* ReserationCollection
+* ReservationService
+* mechanizmy walidacyjne
